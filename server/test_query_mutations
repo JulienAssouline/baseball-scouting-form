@@ -1,0 +1,77 @@
+query {
+  getHitters {
+    id
+    firstname
+    lastname
+    fullname
+    position
+    team
+    scouting_report
+    scouting_future_value
+    scouting_tools {
+      hitting
+      power
+      running
+      fielding
+      throwing
+    }
+  }
+}
+
+
+mutation {
+    addHitters(input: {
+      firstname: "Bo", 
+      lastname: "Bichette", 
+      fullname: "Bo Bichette", 
+      position: "SS",
+      team: "Blue Jays",
+      scouting_report: "The son of four-time All-Star Dante Bichette, Bo has pure hitting ability that earned him an above-slot signing bonus of $1,100,000 as Toronto's second-round pick in 2016. He made an immediate impact after signing, hitting .427/.451/.732 in his pro debut, and then paced the Minors with a .362 average the following year in his first full season. Spending all of 2018 as a 20-year-old in Double-A, Bichette led the Eastern League in hits (154), doubles (43), extra-base hits (61), runs scored (95) and total bases (244) as the circuit's second-youngest regular. Along the way, he represented the U.S. in the SiriusXM All-Star Futures Game for a second straight year."
+      scouting_future_value: 60
+      scouting_hitter_tools: [{
+        name: "hitting",
+        grade: 65,
+      }, {
+        name: "power",
+        grade: 55,
+      }, {
+        name: "running",
+        grade: 50,
+      },
+      {
+        name: "feilding",
+        grade: 55,
+      },
+      {
+        name: "throwing",
+        grade: 50,
+      }]
+    }) {
+    message
+  }
+  }
+
+  mutation {
+    addPitchers(input: {
+      firstname: "Nate", 
+      lastname: "Pearson", 
+      fullname: "Nate Pearson", 
+      position: "RHP",
+      team: "Blue Jays",
+      scouting_report: "Pearson had some late helium ahead of the 2017 Draft after he hit 102 mph during a heavily scouted bullpen session in late May. The Blue Jays ended up selecting the JC of Central Florida product with the second of their two first-round picks the following month, signed him for slightly above slot value at $2,452,900 and then watched him light up radar guns during a dominant pro debut. Pearson's first full season lasted just 1 2/3 innings as he suffered a fractured right forearm after being struck by a line drive in early May, but he returned to the mound and impressed in the Arizona Fall League, finishing with a series of strong outings after a rusty start.",
+      scouting_future_value: 60,
+      scouting_pitches: [{
+        velocity: 96.7,
+    		grade: 60,
+   		  pitch_name: "Fastball",
+      }, {
+        velocity: 77.7,
+    		grade: 50,
+   		  pitch_name: "slider",
+      }]
+    }) {
+    message
+  }
+  }
+
+  
