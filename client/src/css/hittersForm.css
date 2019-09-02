@@ -1,0 +1,46 @@
+.hitters.form {
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+
+.form-field > div {
+	width: 100%;
+}
+.form.error {
+  margin: 10px;
+	color: red;
+}
+
+.tool-name-label {
+    margin: 10px;
+    font-size: 1rem;
+}
+
+.hitter-tools-container {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+}
+
+.tool-name-label {
+    display: inline-block;
+  vertical-align: bottom;
+} 
+
+.submit-button-container {
+    padding: 20px;
+}
+
+.tool-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 20px;
+}
+
+

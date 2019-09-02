@@ -1,0 +1,27 @@
+.hitters-reports-page {
+}
+
+.hitters-reports {
+    margin: 20px;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 20px;
+}
+
+.card.container {
+    padding: 20px;
+    margin: 5px;
+    width: 80%;
+    cursor: pointer;
+  }
+
+  .hitter.modal {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  

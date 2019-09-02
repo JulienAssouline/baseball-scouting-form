@@ -19,7 +19,7 @@ class PitcherDatabase extends DataSource {
 
       const result = await postgres.query(getPitchers)
 
-      return result.rows[0]
+      return result.rows
 
 
   }

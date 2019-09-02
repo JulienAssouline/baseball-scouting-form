@@ -19,9 +19,7 @@ class HitterDatabase extends DataSource {
 
       const result = await postgres.query(getHitters)
 
-      console.log(result.rows)
-
-      return result.rows[0]
+      return result.rows
 
 
   }
@@ -34,8 +32,6 @@ class HitterDatabase extends DataSource {
     }
 
       const result = await postgres.query(tools)
-
-      console.log(result.rows)
 
       return result.rows
 

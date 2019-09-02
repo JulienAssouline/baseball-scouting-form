@@ -5,8 +5,8 @@ module.exports = gql`
   scalar Date
 
   type Query {
-    getHitters: Hitters,
-    getPitchers: Pitchers,
+    getHitters: [Hitters],
+    getPitchers: [Pitchers],
   }
 
   type Hitters {
@@ -51,7 +51,7 @@ module.exports = gql`
  
   type Mutation {
     addHitters(input: hittersInput): addHittersResponse!
-    addPitchers(input: pitchersInupt): addPitchersResponse!
+    addPitchers(input: pitchersInput): addPitchersResponse!
   }
 
   input hittersInput {
@@ -70,7 +70,7 @@ module.exports = gql`
     grade: Int,
   }
 
-  input pitchersInupt {
+  input pitchersInput {
     firstname: String!, 
     lastname: String!, 
     fullname: String, 
