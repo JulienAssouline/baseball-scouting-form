@@ -9,12 +9,12 @@ module.exports = {
   },
   Hitters: {
     async getTools(parent, { input }, { dataSources }){
-      return await dataSources.hitterDatabase.getTools(input)
+      return await dataSources.hitterDatabase.getTools(parent)
     },
   },
   Pitchers: {
     async getPitches(parent, { input }, { dataSources }){
-      return await dataSources.pitcherDatabase.getPitches(input)
+      return await dataSources.pitcherDatabase.getPitches(parent)
     },
   },
 }

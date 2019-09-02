@@ -20,3 +20,24 @@ export const GET_HITTERS = gql`
       }
   }
 `
+export const GET_PITCHERS = gql`
+  query {
+    getPitchers {
+        id
+        firstname
+        lastname
+        fullname
+        position
+        team
+        scouting_report
+        scouting_future_value
+        getPitches {
+          id
+          pitcher_id
+          pitch_name
+          grade
+          velocity
+        }
+      }
+  }
+`

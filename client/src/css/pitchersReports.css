@@ -1,5 +1,5 @@
 
-.hitters-reports {
+.pitchers-reports {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -15,7 +15,7 @@
     cursor: pointer;
   }
 
-  .hitter.modal {
+  .pitcher.modal {
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -26,15 +26,20 @@
       font-weight: bold;
   }
 
-  .tools-container {
+  .pitches-container {
     display: flex;
     flex-flow: row;
   }
 
-  .tools {
+  .pitches {
     margin-right: 15px;
   }
   .grades-container {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .velocity-container {
     display: flex;
     flex-flow: row;
   }

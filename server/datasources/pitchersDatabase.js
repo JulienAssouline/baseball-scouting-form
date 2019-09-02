@@ -24,11 +24,12 @@ class PitcherDatabase extends DataSource {
 
   }
 
-  async getPitches(input) {
+  async getPitches(parent) {
     const { postgres} = this.context
 
     const getPitches = {
-      text: "SELECT id, pitcher_id, pitch_name, grade, velocity FROM bluejaysscouting.scouting_pitches",
+      text: "SELECT id, pitcher_id, pitch_name, grade, velocity FROM bluejaysscouting.scouting_pitches WHERE pitcher_id = $1",
+      values: [parent.id]
     }
 
       const result = await postgres.query(getPitches)

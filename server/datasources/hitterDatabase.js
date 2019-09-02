@@ -24,11 +24,14 @@ class HitterDatabase extends DataSource {
 
   }
 
-  async getTools(input){
+  async getTools(parent){
     const { postgres} = this.context
+    console.log(parent)
+
 
     const tools = {
-      text: "SELECT id, hitter_id, name, grade FROM bluejaysscouting.scouting_hitter_tools",
+      text: "SELECT id, hitter_id, name, grade FROM bluejaysscouting.scouting_hitter_tools WHERE hitter_id = $1",
+      values: [parent.id]
     }
 
       const result = await postgres.query(tools)

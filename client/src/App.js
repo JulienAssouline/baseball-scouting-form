@@ -5,7 +5,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { ApolloProvider } from 'react-apollo';
 import HittingProspectForm from "./components/HittingProspectForm"
 import PitchingProspectForm from "./components/PitchingProspectForm"
-import ScoutingReports from "./components/ScoutingReports"
+import HittersScoutingReports from "./components/HittersScoutingReports"
+import PitchersScoutingReports from "./components/PitchersScoutingReports"
+
+import NavTabs from "./components/Nav"
 
 import {Button} from '@material-ui/core'
 
@@ -19,19 +22,12 @@ function App(props) {
       <div className="App">
       <Router>
         <div className = "button-container">
-          <Link to={`/`}>
-            <Button variant="contained" color="primary">Hitters</Button>
-          </Link>
-          <Link to={`/pitching`}>
-            <Button variant="outlined" color="primary">Pitchers</Button>
-          </Link>
-          <Link to={`/reports`}>
-            <Button variant="outlined" color="primary">Reports</Button>
-          </Link>
+          <NavTabs />
         </div>
             <Route path="/" exact component = {HittingProspectForm} />
-            <Route path="/pitching" exact component = {PitchingProspectForm} />
-            <Route path="/reports" exact component = {ScoutingReports} />
+            <Route path="/pitching" component = {PitchingProspectForm} />
+            <Route path="/hitters/reports" component = {HittersScoutingReports} />
+            <Route path="/pitchers/reports" component = {PitchersScoutingReports} />
           </Router>
       </div>
     </ApolloProvider>
