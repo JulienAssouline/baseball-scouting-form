@@ -25,8 +25,8 @@ const initialFormValues = {
 } 
 
 function HittingProspectForm(props) {
-    const [addHitter, {data}] = useMutation(ADD_HITTERS, {
-        onCompleted(data) {
+    const [addHitter] = useMutation(ADD_HITTERS, {
+        onCompleted() {
             props.history.push("/hitters/reports")
           }
     })

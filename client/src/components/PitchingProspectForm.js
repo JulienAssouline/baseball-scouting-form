@@ -22,8 +22,8 @@ const initialFormValues = {
 
 function PitchingProspectForm(props) {
 
-    const [addPitcher, {data}] = useMutation(ADD_PITCHERS, {
-        onCompleted(data) {
+    const [addPitcher] = useMutation(ADD_PITCHERS, {
+        onCompleted() {
             props.history.push("/pitchers/reports")
           }
     })

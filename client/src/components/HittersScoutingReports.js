@@ -20,7 +20,6 @@ function HittersScoutingReports() {
 
     const [open, setOpen] = useState({});
 
-
     const {loading, error, data} = useQuery(GET_HITTERS)
 
     if (loading) return <p>Loading...</p>
@@ -33,8 +32,6 @@ function HittersScoutingReports() {
     function handleClose() {
         setOpen(false)
     }
-
-    console.log(data)
 
 return (
     <div className = "hitters-reports-page">
