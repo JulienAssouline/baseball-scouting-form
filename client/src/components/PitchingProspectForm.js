@@ -33,7 +33,6 @@ function PitchingProspectForm(props) {
           <Formik
               initialValues = {initialFormValues}
               onSubmit={(values, { setSubmitting }) => {
-                  console.log(values)
                   values.scouting_future_value = Number(values.scouting_future_value)
                   values.scouting_pitches.forEach(pitch => {
                     pitch.grade = Number(pitch.grade)

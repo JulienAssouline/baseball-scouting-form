@@ -34,8 +34,6 @@ class PitcherDatabase extends DataSource {
 
       const result = await postgres.query(getPitches)
 
-      console.log(result.rows)
-
       return result.rows
 
   }
