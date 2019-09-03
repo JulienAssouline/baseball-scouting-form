@@ -4,13 +4,17 @@ This project was made with React, Apollo, GraphQL, and PostgreSQL.
 
 In order for the app to work make sure you have both the backend and frontend running.
 
+## Installation
+
+To run this project first `git clone https://github.com/JulienAssouline/baseball-scouting-form.git`
+
 ## Setup the Backend
 
 `cd into server` then run `yarn`
 
 I'm using postgresql so make sure you have that installed on your computer.
 
-Check default.json in config for postgres settings.
+Check `default.json` in `config` for postgres settings.
 
 To start the graphql apollo server run `NODE_ENV=development yarn start:dev`
 
