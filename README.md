@@ -1,5 +1,9 @@
 # Scouting Report Form Application
 
+This project was made with React, Apollo, GraphQL, and PostgreSQL.
+
+In order for the app to work make sure you have both the backend and frontend running.
+
 ## Setup the Backend
 
 `cd into server` then run `yarn`
@@ -22,5 +26,4 @@ To restart your database run `yarn db:reset`.
 
 Run `yarn start` and it should work. 
 
-It order for the app to work make sure you have both the backend and frontend running.
 
