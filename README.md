@@ -20,7 +20,7 @@ You can find example queries and mutations in the `test_queries_and_mutations` f
 
 To restart your database run `yarn db:reset`.
 
-## Setup Front End
+## Setup FrontEnd
 
 `cd into client` then run `yarn`
 
