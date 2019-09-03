@@ -41,14 +41,14 @@ function PitchersScoutingReports() {
 
 return (
     <div className = "pitchers-reports-page">
-        <h1> Pitcher Prospects Reports </h1>
+        <h1> Pitcher Prospect Report </h1>
         <div className = "pitchers-reports">
             {data.getPitchers.map((d,i) => (
                 <div key = {"card"+i}>
                 <Paper onClick={() => handleOpen(d.id)} className = "card container">
-                    <h1>{d.fullname}</h1>
-                    <p> {d.position} </p>
-                    <p> {d.team} </p>
+                    <h1 className = "full-name">{d.fullname}</h1>
+                    <p> {d.position.toUpperCase()} </p>
+                    <p className = "team-text"> {d.team} </p>
                 </Paper>
                 <Modal
                      aria-labelledby="simple-modal-title"
@@ -59,11 +59,11 @@ return (
                    >
                      <div className={classes.paper}>
                        <div className = "modal-header">
-                         <h2 id="simple-modal-title">{d.fullname}</h2> <h3 className = "pip">|</h3><h3>Grade: {d.scouting_future_value}</h3>
+                         <h2 className = "full-name">{d.fullname}</h2> <h3 className = "pip">|</h3><h3>Grade: {d.scouting_future_value}</h3>
                        </div>
                        <div>
-                            <p> Position: {d.position} </p>
-                            <p> Team: {d.team} </p>
+                            <p> Position: {d.position.toUpperCase()} </p>
+                            <p className = "team-text"> Team: {d.team} </p>
                        </div>
                        <span className = "grades-title">Scouting grades:</span>
                        <div className = "pitches-container">
@@ -81,7 +81,7 @@ return (
                                 </div>
                             ))}
                        </div>
-                       <p id="simple-modal-description">
+                       <p className="scounting-report-modal-text">
                          {d.scouting_report}
                        </p>
                      </div>

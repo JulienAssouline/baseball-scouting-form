@@ -33,6 +33,7 @@
 
   .pitches {
     margin-right: 15px;
+    text-transform: capitalize;
   }
   .grades-container {
     display: flex;
@@ -53,4 +54,16 @@
   .pip {
       margin-left: 10px;
       margin-right: 10px;
+  }
+
+  .scounting-report-modal-text {
+    font-size: 15px;
+  }
+
+  .full-name {
+    text-transform: capitalize;
+  }
+
+  .team-text {
+    text-transform: capitalize;
   }

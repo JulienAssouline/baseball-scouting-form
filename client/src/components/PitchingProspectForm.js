@@ -1,6 +1,7 @@
 import React from 'react';
 import "../css/pitchersForm.css"
 import { ADD_PITCHERS } from "../gql/mutations"
+import { GET_PITCHERS } from "../gql/queries"
 import { useMutation } from '@apollo/react-hooks';
 import { Formik, Form, FieldArray, getIn } from 'formik'
 import { pitcherValidation } from '../validationSchemas'
@@ -23,6 +24,7 @@ const initialFormValues = {
 function PitchingProspectForm(props) {
 
     const [addPitcher] = useMutation(ADD_PITCHERS, {
+        refetchQueries: [{query: GET_PITCHERS}],
         onCompleted() {
             props.history.push("/pitchers/reports")
           }
@@ -38,7 +40,9 @@ function PitchingProspectForm(props) {
                     pitch.grade = Number(pitch.grade)
                     pitch.velocity = Number(pitch.velocity)
                   })
-                  addPitcher({variables: {input: values}})
+                  addPitcher({
+                      variables: {input: values}
+                    })
 
                 setSubmitting(false);
             }}
@@ -159,7 +163,7 @@ function PitchingProspectForm(props) {
                                         id= "scouting_report"
                                         label= "Scouting Report"
                                         multiline
-                                        rowsMax="4"
+                                        rows="5"
                                         value = {values.scouting_report}
                                         className = "pitcher-scouting-report"
                                         onChange={handleChange}

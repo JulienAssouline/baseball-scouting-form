@@ -2,6 +2,7 @@ import React from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import "../css/hittersForm.css"
 import { Formik, Form, FieldArray, getIn } from 'formik'
+import { GET_HITTERS } from "../gql/queries"
 import { hitterValidation } from '../validationSchemas'
 import { TextField, Button, Paper, FormHelperText } from '@material-ui/core'
 import ToolsField from "./ToolsField"
@@ -26,6 +27,7 @@ const initialFormValues = {
 
 function HittingProspectForm(props) {
     const [addHitter] = useMutation(ADD_HITTERS, {
+        refetchQueries: [{query: GET_HITTERS}],
         onCompleted() {
             props.history.push("/hitters/reports")
           }
@@ -160,7 +162,7 @@ function HittingProspectForm(props) {
                                         id= "scouting_report"
                                         label= "Scouting Report"
                                         multiline
-                                        rowsMax="4"
+                                        rows="5"
                                         value = {values.scouting_report}
                                         className = "hitter-scouting-report"
                                         onChange={handleChange}

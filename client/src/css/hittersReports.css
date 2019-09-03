@@ -49,3 +49,18 @@
       margin-left: 10px;
       margin-right: 10px;
   }
+
+  .fullname {
+    text-transform: capitalize;
+  }
+
+  .team-text {
+    text-transform: capitalize;
+  }
+
+  .scounting-report-modal-text {
+    font-size: 15px;
+  }
+.tools {
+  text-transform: capitalize;
+}
